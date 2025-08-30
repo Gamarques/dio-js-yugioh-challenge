@@ -19,17 +19,17 @@
   background-size: 100% 100%;
 
   /* font size */
-  font-size: 1em;
+  font-size: clamp(0.8rem, 2vw, 1.2rem);
 
   /* default size and display */
   max-width: 100%;
-  min-width: 140px;
-  height: 60px;
+  min-width: clamp(120px, 15vw, 180px);
+  height: clamp(50px, 8vw, 70px);
   display: inline-block;
 
   /* padding */
-  padding-left: 35px;
-  padding-right: 35px;
+  padding-left: clamp(25px, 4vw, 35px);
+  padding-right: clamp(25px, 4vw, 35px);
 }
 
 /* button hover */
@@ -65,16 +65,19 @@
   background-position: center;
   background-size: 100% 80%;
 
+  /* font size responsive */
+  font-size: clamp(0.8rem, 2vw, 1.2rem);
+
   /* default size and display */
   max-width: 100%;
-  min-width: 140px;
-  height: 60px;
+  min-width: clamp(120px, 15vw, 180px);
+  height: clamp(50px, 8vw, 70px);
   display: inline-block;
 
   /* padding */
   padding-top: 5px;
-  padding-left: 35px;
-  padding-right: 35px;
+  padding-left: clamp(25px, 4vw, 35px);
+  padding-right: clamp(25px, 4vw, 35px);
   overflow: visible;
 }
 
@@ -134,3 +137,55 @@
   background-image: url('img/button-golden-right-hover.png');
 }
 */
+
+/* ========== MEDIA QUERIES PARA BOTÕES ========== */
+
+@media screen and (max-width: 768px) {
+  .rpgui-button {
+    min-width: clamp(100px, 12vw, 140px);
+    height: clamp(45px, 7vw, 60px);
+    font-size: clamp(0.7rem, 1.8vw, 1rem);
+  }
+  
+  .rpgui-button.golden {
+    min-width: clamp(100px, 12vw, 140px);
+    height: clamp(45px, 7vw, 60px);
+    font-size: clamp(0.7rem, 1.8vw, 1rem);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .rpgui-button {
+    min-width: clamp(90px, 20vw, 120px);
+    height: clamp(40px, 10vw, 50px);
+    font-size: clamp(0.6rem, 3vw, 0.9rem);
+    padding-left: clamp(15px, 3vw, 25px);
+    padding-right: clamp(15px, 3vw, 25px);
+  }
+  
+  .rpgui-button.golden {
+    min-width: clamp(90px, 20vw, 120px);
+    height: clamp(40px, 10vw, 50px);
+    font-size: clamp(0.6rem, 3vw, 0.9rem);
+    padding-left: clamp(15px, 3vw, 25px);
+    padding-right: clamp(15px, 3vw, 25px);
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .rpgui-button {
+    min-width: 80px;
+    height: 35px;
+    font-size: 0.7rem;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  
+  .rpgui-button.golden {
+    min-width: 80px;
+    height: 35px;
+    font-size: 0.7rem;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}

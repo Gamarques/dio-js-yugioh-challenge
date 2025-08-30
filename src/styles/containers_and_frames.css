@@ -18,9 +18,9 @@
   border-image-source: url("../assets/rpg/border-image.png");
   border-image-repeat: repeat;
   border-image-slice: 6 6 6 6;
-  border-image-width: 18px;
-  border-width: 15px;
-  padding: 12px;
+  border-image-width: clamp(12px, 2vw, 18px);
+  border-width: clamp(10px, 1.5vw, 15px);
+  padding: clamp(8px, 1.2vw, 12px);
 
   /* internal border */
   box-sizing: border-box;
@@ -64,9 +64,9 @@
   border-image-source: url("../assets/rpg/border-image-golden2.png");
   border-image-repeat: repeat;
   border-image-slice: 8 8 8 8;
-  border-image-width: 18px;
-  border-width: 15px;
-  padding: 12px;
+  border-image-width: clamp(12px, 2vw, 18px);
+  border-width: clamp(10px, 1.5vw, 15px);
+  padding: clamp(8px, 1.2vw, 12px);
 
   /* internal border */
   box-sizing: border-box;
